@@ -6,7 +6,12 @@ import os
 
 # --- Charger le logo ---
 logo_path = "logo.png"  # Assure-toi que le fichier est bien dans le dossier
-st.sidebar.image(logo_path, width=150)
+import os
+
+if os.path.exists("logo.png"):
+    st.sidebar.image("logo.png", width=150)
+else:
+    st.sidebar.write("Logo non disponible")
 
 # --- Titre de l'application ---
 st.title("Test de Personnalité")
